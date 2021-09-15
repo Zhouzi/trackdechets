@@ -15,7 +15,7 @@ export default function Acceptation({
   const { setFieldValue } = useFormikContext();
 
   function handleAcceptationToggle() {
-    setFieldValue(`${name}.refusedQuantity`, null);
+    setFieldValue(`${name}.refusedWeight`, null);
     setFieldValue(`${name}.refusalReason`, null);
     setFieldValue(`${name}.status`, "ACCEPTED");
   }
@@ -54,8 +54,8 @@ export default function Acceptation({
               Quantité refusée
               <Field
                 component={NumberInput}
-                name={`${name}.refusedQuantity`}
-                className="td-input dasri__waste-details__quantity"
+                name={`${name}.refusedWeight`}
+                className="td-input dasri__waste-details__weight"
                 disabled={props?.disabled}
                 placeholder="En kg"
                 min="0"
