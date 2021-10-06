@@ -67,6 +67,7 @@ export const fullBsdasriFragment = gql`
       company {
         ...CompanyFragment
       }
+      plates
       recepisse {
         number
         department

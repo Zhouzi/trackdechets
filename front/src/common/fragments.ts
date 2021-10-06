@@ -400,6 +400,7 @@ export const dasriFragment = gql`
       company {
         ...CompanyFragment
       }
+      plates
       recepisse {
         number
         department

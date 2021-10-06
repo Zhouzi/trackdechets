@@ -86,7 +86,7 @@ export function unflattenBsdasri(bsdasri: Bsdasri): GqlBsdasri {
         contact: bsdasri.transporterCompanyContact
       }),
       customInfo: bsdasri.transporterCustomInfo,
-
+      plates: bsdasri.transporterTransportPlates,
       recepisse: nullIfNoValues({
         department: bsdasri.transporterRecepisseDepartment,
         number: bsdasri.transporterRecepisseNumber,
@@ -323,6 +323,7 @@ function flattenTransporterInput(input: {
     ),
 
     transporterCustomInfo: chain(input.transporter, e => e.customInfo),
+    transporterTransportPlates: chain(input.transporter, e => e.plates),
     ...flattenTransportInput(input.transporter)
   });
 }

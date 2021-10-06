@@ -52,6 +52,9 @@ type BsdasriTransporter {
   "Champ libre"
   customInfo: String
 
+  "Plaque(s) d'immatriculation"
+  plates: [String]
+
   transport: BsdasriTransport
 }
 
