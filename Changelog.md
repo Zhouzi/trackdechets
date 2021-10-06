@@ -10,9 +10,11 @@ et le projet suit un schéma de versionning inspiré de [Calendar Versioning](ht
 #### :rocket: Nouvelles fonctionnalités
 
 #### :boom: Breaking changes
- 
+
 #### :bug: Corrections de bugs
- 
+
+- Correction de la validation des contenants lors de la signature transporteur sur le BSDD [PR 1012](https://github.com/MTES-MCT/trackdechets/pull/1012)
+
 #### :nail_care: Améliorations
 
 - À la création d'une entreprise, le réglage "j'autorise l'emport direct de dasris" est proposé [PR 1006](https://github.com/MTES-MCT/trackdechets/pull/1006)
@@ -30,10 +32,12 @@ et le projet suit un schéma de versionning inspiré de [Calendar Versioning](ht
 #### :bug: Corrections de bugs
 
 - Correction d'un bug d'affichage dans la préparation d'un transfert multi-modal [PR 997](https://github.com/MTES-MCT/trackdechets/pull/997)
+
 #### :nail_care: Améliorations
 
 - Rafraichissement automatique de la liste des bordereaux dans l'UI Trackdéchets [PR 985](https://github.com/MTES-MCT/trackdechets/pull/985)
 - Ajout d'un filtre sur les champs "Plaque d'immatriculation" et "Champ libre" dans le tableau de bord transporteur [PR 998](https://github.com/MTES-MCT/trackdechets/pull/998)
+
 #### :memo: Documentation
 
 #### :house: Interne
@@ -43,6 +47,7 @@ et le projet suit un schéma de versionning inspiré de [Calendar Versioning](ht
 #### :rocket: Nouvelles fonctionnalités
 
 - La signature du producteur dasri avec code secret est disponible dans l'UI [PR 987](https://github.com/MTES-MCT/trackdechets/pull/987)
+
 #### :boom: Breaking changes
 
 - La validation de la mutation `createBsff` a été renforcée, certains champs sont maintenant requis (cf la documentation pour plus de détails). Il est possible d'utiliser la mutation `createDraftBsff` pour conserver l'ancien comportement [PR 971](https://github.com/MTES-MCT/trackdechets/pull/971).
@@ -58,7 +63,6 @@ et le projet suit un schéma de versionning inspiré de [Calendar Versioning](ht
 - Sur l'interface Trackdéchets, les champs se pré-remplissent désormais lors d'un groupement, réexpédition ou reconditionnement d'un BSFF [PR 971](https://github.com/MTES-MCT/trackdechets/pull/971).
 - La validation du groupement, réexpédition et reconditionnement d'un BSFF a été renforcée [PR 971](https://github.com/MTES-MCT/trackdechets/pull/97
 - Améliorations des filtres sur les champs "Numéro de BSD" et "Déchet" dans le tableau de bord de l'interface Trackdéchets [PR 983](https://github.com/MTES-MCT/trackdechets/pull/983)
-
 
 #### :memo: Documentation
 
