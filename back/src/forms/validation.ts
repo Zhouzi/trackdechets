@@ -407,7 +407,6 @@ const wasteDetailsSchemaFn: FactorySchemaOf<boolean, WasteDetails> = isDraft =>
     wasteDetailsPackagingInfos: yup
       .array()
       .requiredIf(!isDraft, "Le détail du conditionnement est obligatoire")
-      .min(isDraft ? 0 : 1, "Le nombre de contenants doit être supérieur à 0")
       .of(packagingInfoFn(isDraft))
       .test(
         "is-valid-packaging-infos",
@@ -449,6 +448,15 @@ const wasteDetailsSchemaFn: FactorySchemaOf<boolean, WasteDetails> = isDraft =>
   });
 
 export const wasteDetailsSchema = wasteDetailsSchemaFn(false);
+
+export const beforeSignedByTransporterSchema: yup.SchemaOf<Pick<
+  Form,
+  "wasteDetailsPackagingInfos"
+>> = yup.object({
+  wasteDetailsPackagingInfos: yup
+    .array()
+    .min(1, "Le nombre de contenants doit être supérieur à 0")
+});
 
 // 8 - Collecteur-transporteur
 const transporterSchemaFn: FactorySchemaOf<boolean, Transporter> = isDraft =>
